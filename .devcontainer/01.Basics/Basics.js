@@ -21,17 +21,20 @@ because of issue in block scope & functional scope
 Original Standards Documentation : ECMAScript */
 
 /* Data types:
+
    1.Primitive Datatypes:
    number => 2 to power about 53
    bigint => Extremely large value of number
    string => ""
    boolean => true/false
+   
+   2. Object:
    null => representation of empty space
    undefined => variable assigned but has not been defined with any value
    symbol => uniqueness
-   2. Object:
    */
 
 console.log(typeof "Sobhanjan")
 console.log(typeof age);
-
+console.log(typeof null); //object
+console.log(typeof undefined); //undefined
