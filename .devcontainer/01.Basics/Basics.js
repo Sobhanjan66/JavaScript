@@ -1,3 +1,5 @@
+//++++++ Basics including Datatypes, datatype conversions, operations & Memory usage in Js ++++++
+
 console.log("Sobhanjan")
 const accountId = 144553
 let email = "Sobhanjan@gmail.com"
@@ -111,3 +113,27 @@ That's why null >= 0 is true and null > O is false. */
 
 console.log("2" == 2); //true due to conversion
 console.log("2" === 2); //false due to strict check operator checks value & datatype both.
+
+//++++++++++++++++++++++++++++Stack & Heap memeory++++++++++++++++++++++++++++
+//  Stack (Primitive), Heap (Non-Primitive)
+
+//In case of Stack Memory:
+let myYoutubename = "HiteshChoudhury"
+let anothername = myYoutubename
+anothername = "chaiaurcode"
+console.log (myYoutubename) ; //HiteshChoudhury
+console.log (anothername) ;   //chaiaurcode
+
+//In case of Heap Memory:
+let userOne = {
+   email: "user@google.com",
+   upi: "user@ybl"
+}
+   let userTwo = userOne
+   userTwo. email = "hitesh@google.com"
+
+   console.log (userOne.email) ; //hitesh@google.com
+   console.log (userTwo.email) ; //hitesh@google.com
+   
+   
+
