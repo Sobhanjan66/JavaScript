@@ -1,0 +1,39 @@
+const arr = [1,2,3,4,5]
+const myHeros = ["IronMan","SuperMan","SpiderMan"]
+const arr2 = new Array(6,7,8,9)
+
+console.log(arr[0]);
+console.log(arr2[1]);
+
+//Array Methods
+
+arr.push(6)
+arr.push(7)
+arr.pop()
+console.log(arr);
+
+arr2.unshift(10) //to push at first index
+console.log(arr2);
+arr2.shift() // remove first index value 
+console.log(arr2);
+
+console.log(arr.includes(9))
+console.log(arr.indexOf(9))
+console.log(arr.indexOf(3))
+
+const newArr = arr.join()
+console.log(arr);
+console.log(newArr);
+console.log(typeof newArr);
+
+// Use & difference of Slice & Splice methods in array
+
+const array = [11,22,33,44,55]
+
+console.log("A", array);
+console.log(array.slice(1,3));
+console.log("B", array);
+console.log(array.splice(1,3)); // splice cut down the selected portion from array & then print that & manipulate/change the original array
+console.log("C", array);
+
+
