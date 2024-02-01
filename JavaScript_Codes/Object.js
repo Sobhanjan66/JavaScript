@@ -90,3 +90,15 @@ console.log(Object.entries(tinderUser)); //shows arrays of key-value pairs in ar
 //   ]
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn')); //true
+
+const  course = {
+    coursename: "JavaScript Hindi",
+    price: "999",
+    courseInstructor: "Sobhanjan"
+}
+//course.courseInstructor
+
+//Here we'll use tye concept of object destructuring:
+const {courseInstructor:teacher,price} = course
+console.log(teacher); 
+console.log(price); 
