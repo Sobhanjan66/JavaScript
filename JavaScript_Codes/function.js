@@ -36,3 +36,25 @@ function logginstatus(username = "Someone"){
 }
 console.log(logginstatus()); //Someone just logged in!
 console.log(logginstatus("Sobhanjan")); //Sobhanjan just logged in!
+
+function calculateCartPrice(...num){ //using rest operator
+    return num 
+}
+console.log(calculateCartPrice(200,300,50)); //[ 200, 300, 50 ]
+
+//Handling objects within function
+const user = {
+    name:"Sobhanjan",
+    price: 349
+}
+function handleObject(anyobject) {
+    console.log(`Username is ${anyobject.name} & his course price is ${anyobject.price}`);    
+}
+handleObject(user)
+
+//Handling arrays within function
+myNewArray = [200,300,400,800]
+function returnSecondValue(getArray) {
+    return `The value is ${getArray[1]}`
+}
+console.log(returnSecondValue(myNewArray));
