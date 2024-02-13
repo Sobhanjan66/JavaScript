@@ -11,7 +11,10 @@ for (const num of arr) {
 
 const greetings = "Hello world!"
 for (const greet of greetings) {
-    //console.log(`Each char is ${greet}`)
+    if (greet ==" "){
+        continue
+    }
+    console.log(`Each char is ${greet}`)
 }
 
 // Maps
@@ -19,7 +22,7 @@ for (const greet of greetings) {
 const map = new Map()
 map.set('IN', "India")
 map.set('USA', "United States of America")
-map.set('Fr', "France")
+map.set('FR', "France")
 map.set('IN', "India")
 
 
@@ -37,8 +40,9 @@ const myObject1 = {
 // for (const [key, value] of myObject1) {
 //     console.log(key, ':-', value);
     
-// }
+// } //for-of loop can't work on normal objects
 
+//for in loop
 const myObject2 = {
     js: 'javascript',
     cpp: 'C++',
@@ -105,3 +109,5 @@ myCoding.forEach( (item) => {
     
     console.log(item.languageName);
 } )
+
+//forEach loop doesn't return any value out of it's scope, that's the limitation of it
