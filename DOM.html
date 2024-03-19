@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.Parent');
+    console.log(parent); //<div class="Parent">...</div>
+    console.log(parent.children); //HTMLCoLLection(5) [div. day, div. day, div. day, div. day,div. day]
+    console.log(parent.children[1].innerHTML); //Tuesday
+
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML); //we can also use loop on html collection
+    }
+
+    parent.children[2].style.color = "orange"
+    console.log(parent.firstElementChild); //<div class="day">Monday</div>
+    console.log(parent.lastElementChild); //<div class="day">Friday</div>
+     
+    const day1 = document.querySelector('.day') 
+    console.log(day1); //<div class="day">Monday</div>
+    console.log(day1.parentElement); //<div class="Parent">...</div>
+    console.log(day1.nextElementSibling); //<div class="day">Tuesday</div>
+    console.log("NODES: ",parent.childNodes);
+//     NodeList(11) [text, div. day, text, div. day, text, div. day,
+// text, div. day, text, div. day, text] 
+
+// Creation element
+const div = document.createElement('div')
+console.log(div); //<div></div>
+div.className = "main"
+div.id = Math.round(Math.random()*10+1)
+div.setAttribute("title","Sobhanjan")
+div.style.backgroundColor="green"
+div.style.padding ="12px"
+//div.innerText = "Sobhanjan"
+const addText =document.createTextNode("Sobhanjan")
+div.appendChild(addText)
+document.body.appendChild(div)
+//<div class="main" id="7" title="sobhanjan" style="background-color: green; padding: 12px; ">Sobhanjan</div>
+
+</script>
+</html>

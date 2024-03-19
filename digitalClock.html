@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #clockContainer {
+            background-color: black;
+            color: blue;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Digital-7", sans-serif; /* Assuming "Digital-7" is a digital-style font */
+            font-size: 10vw; /* Initial font size */
+            line-height: 1; /* Ensure digits are closely spaced */
+            white-space: nowrap; /* Prevent wrapping of text */
+        }
+    </style>
+</head>
+<body>
+    <div id="clockContainer"></div>
+    <script>
+        const div = document.getElementById('clockContainer');
+
+        function updateTime() {
+            let time = new Date();
+            div.textContent = time.toLocaleTimeString([], {hour12: false});
+        }
+
+        updateTime(); // Call initially
+        setInterval(updateTime, 1000); // Update time every second
+
+        // Dynamically adjust font size to fill the larger dimension of the window
+        function adjustFontSize() {
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            const fontSize = Math.max(windowWidth, windowHeight) * 0.1; // Adjust multiplier as needed
+            div.style.fontSize = fontSize + 'px';
+        }
+
+        adjustFontSize(); // Call initially
+        window.addEventListener('resize', adjustFontSize); // Call when window is resized
+    </script>
+</body>
+</html>
